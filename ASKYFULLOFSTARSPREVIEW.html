@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <head>
+	<link rel="shortcut icon" type="image/x-icon" href="download.ico"/>
+	<title>Music | Coldplay</title>
+	<link type="text/css" rel="stylesheet" href="nicuwa.css">
+	<link type="text/css" rel="stylesheet" href="button.css">
 </head>
 <body background="images/ghost.jpg">
-	<button type='button/' onclick="showPlayer('asfos')">A Sky Full Of Stars</button>
-	<audio id="asfos" controls style="visibility: hidden;">
-		<source src="downloads/Music/coldplay/GhostStories/A Sky Full Of Stars.mp3" type='audio/mp3'>
-		<p>
-			Your Browser Doesn't Support the HTML5 Player
-		</p>
-	</audio>
-	<script>
-		function showPlayer(var id)
+		<script>
+		function togglePlayer1(id, playId, bnId)
 		{
-			document.getElementById(id).style.visibility = "visible";
+			if(document.getElementById(id).style.display == 'block')
+			{
+				document.getElementById(id).style.display = 'none';
+				document.getElementById(playId).load();
+			}
+			else if(document.getElementById(id).style.display == 'none')
+			{
+				document.getElementById(id).style.display = 'block';
+				document.getElementById(bnId).style.display = 'block';
+			}
 		}
 	</script>
-	<script>
-		function hidePlayer(var id)
-		{
-			document.getElementById(id).style.visibility = "hidden";
-		}
-	</script>
+	
+	<table>
+		
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<button id="asfosBn"type="button" onclick="togglePlayer1('asfos', 'asfosPlay');">A Sky Full Of Stars</button>
+	<div id="asfos" style="display: none">
+		<audio  controls id="asfosPlay">
+			<source src="downloads/Music/coldplay/GhostStories/A Sky Full Of Stars.mp3" type='audio/mp3'>
+			<p>
+				Your Browser Doesn't Support the HTML5 Player
+			</p>
+		</audio>
+	</div>
 </body>
