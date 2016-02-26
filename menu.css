@@ -1,10 +1,10 @@
 div{
 	width: 209px;
 	height: 80px;
-	background-color: #0e63d8;
+	background-color: transparent;
 	text-align: center;
 }
 span{
-	color: #96f415;
+	color: white;
 	font-size: 50px;
 }
