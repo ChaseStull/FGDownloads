@@ -1,40 +1,110 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="shortcut icon" type="image/x-icon" href="download.ico"/>
-		<title>Music | Coldplay</title>
-		<link type="text/css" rel="stylesheet" href="styodyd.css"/>
-		<link type="text/css" rel="stylesheet" href="menu.css"/>
-	</head>
-	<body background="images\download.png">
-		<div style="background-color: white; width: 100%; overflow: hidden;">
-    		<a href="programs.html"><div style="float: left; margin-left: 1%; width: 19%"><span>Programs</span></div></a>
-   			<a href="music.html"><div style="float: left; margin-left: 1%; width: 19%; background-color: white"><span style="color: black">Music</span></div></a>
-   			<a href="movies.html"><div style="float: left; margin-left: 1%; width: 19%"><span>Movies</span></div></a>
-   			<a href="games.html"><div style="float: left; margin-left: 1%; width: 19%"><span>Games</span></div></a>
-   			<a href="otherFiles.html"><div style="float: left; margin-left: 1%; width: 19%"><span>Other</span></div></a>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="download.ico"/>
+	<title>Music | Coldplay</title>
+	<link type="text/css" rel="stylesheet" href="nicuwa.css">
+	<link type="text/css" rel="stylesheet" href="button.css">
+</head>
+<body background="images/maxresdefault.jpg">
+	<script>
+		function togglePlayer(id, playId, bnId, aId)
+		{
+			
+			if(aId == 'rush')
+			{
+				document.getElementById(id).style.display = 'block';
+				document.getElementById(bnId).style.display = ''
+				document.getElementById('clock').style.display = 'none';
+				if(document.getElementById(id).style.display == 'none')
+				{
+					document.getElementById(id).style.display = 'block';
+					document.getElementById(bnId).style.display = 'none';
+				}
+			}
+			else if(aId == 'ghost')
+			{
+				document.getElementById('asfos').style.display = 'none';
+				if(document.getElementById(id).style.display == 'none')
+				{
+					document.getElementById(id).style.display = 'block';
+					document.getElementById(bnId).style.display = 'none';
+				}
+			}
+			else if(aId == 'xyloto')
+			{
+				
+			}
+			else if(aId == 'viva')
+			{
+				
+			}
+			document.getElementById('asfosPlay').load();
+			document.getElementById('clockPlay').load();
+		}
+	</script>
+	<script>
+		function toggleAlbum(id, dId, tId)
+		{
+			document.getElementById('aRush').style.display = 'none';
+			document.getElementById('ghostStories').style.display = 'none';
+			document.getElementById('mylo').style.display = 'none';
+			document.getElementById('vivaLaVida').style.display = 'none';
+			document.getElementById(id).style.display = 'block';
+		}
+	</script>
+	<div style="margin-left: 27.5%">
+		<div id="aR" style="float: left;">
+			<button onclick="toggleAlbum('aRush');" style="margin-top: 5%"><b id="aT">A Rush of Blood to the Head</b></button>
 		</div>
-		<hr/>
-		<h2><b>Select your search category</b>(all files are in mp3 format)</h2>
-		If you need other file formats, download the file then click <a href="http://www.audio.online-convert.com" style="color: yellow; text-decoration: none">here</a>
-		<br>
-		<a href="artists.html"><div style="float: left; width: 49%; background-color: white"><span style="color: black">Artists</span></div></a>
-		<div style="float: left; width:2%; background-color: lime"></div>
-		<a href="allSongs.html"><div style="float: left; width: 49%"><span>All Songs</span></div></a>
-		<br>
-		<table border="1px">
-			<thead>
-				<tr><th colspan="4">Songs By Coldplay</th></tr>
-				<tr><th>Name</th><th>Album</th><th>Length</th><th>Size</th></tr>
-			</thead>
-			<tbody>
-				<tr><td><a href="downloads\Music\coldplay\ARushOfBloodToTheHead\Clocks.mp3" download="downloads\Music\Clocks.mp3">Clocks</a></td><td>A Rush Of Blood To The Head</td><td>5:07</td><td>4,811 KB</td></tr>
-				<tr><td><a href="downloads\Music\coldplay\GhostStories\A Sky Full Of Stars.mp3" download="downloads\Music\coldplay\GhostStories\A Sky Full Of Stars.mp3">A Sky Full Of Stars</a></td><td>Ghost Stories</td><td>4:28</td><td>8,398 KB</td></tr>
-				<tr><td><a href="downloads\Music\coldplay\HungerGames-CatchingFire\Atlas.mp3" download="downloads\Music\coldplay\HungerGames-CatchingFire\Atlas.mp3">Atlas</a></td><td>Hunger Games: Catching Fire</td><td>3:55</td><td>9,236 KB</td></tr>
-				<tr><td><a href="downloads\Music\coldplay\MyloXyloto\Paradise.mp3" download="downloads\Music\coldplay\MyloXyloto\Paradise.mp3">Paradise</a></td><td>Mylo Xyloto</td><td>4:37</td><td>4,345 KB</td></tr>
-				<tr><td><a href="downloads\Music\coldplay\VivaLaVidaOrDeathAndAllHisFriend\Viva La Vida.mp3" download="downloads\Music\coldplay\VivaLaVidaOrDeathAndAllHisFriend\Viva La Vida.mp3">Viva La Vida</a></td><td>Viva la Vida or Death and All His Friend</td><td>4:01</td><td>3,779 KB</td></tr>
-			</tbody>
-		</table>
-		<a href="categories.html"><img src="images\home-button.png" style="width: 200px; height: 200px;"/></a>
-	</body>
-</html>
+		<div id="gS" style="float: left;">
+			<button onclick="toggleAlbum('ghostStories');"><b id="gT">Ghost Stories</b></button>
+		</div>
+		<div id="mX" style="float: left;">
+			<button onclick="toggleAlbum('mylo');"><b>Mylo Xyloto</b id="mT"></button>
+		</div>
+		<div id="vV" style="float: left;">
+			<button onclick="toggleAlbum('vivaLaVida');" style="margin-top: 5%"><b id="vT">Viva La Vida or Death and all His Friends</b></button>
+		</div>
+	</div>
+
+	<table id="aRush" style="display: none;">
+		<thead>
+			<tr><th>Song</th><th>Length</th></tr>
+		</thead>
+		<tbody>
+			<tr><td><button id="clockBn"type="button" onclick="togglePlayer('clock', 'clockPlay', 'clockBn', 'rush');">Clocks</button><div id="clock" style="display: none"><audio  controls id="clockPlay"><source src="downloads/Music/coldplay/ARushOfBloodToTheHead/Clocks.mp3" type='audio/mp3'><p>Your Browser Doesn't Support the HTML5 Player</p></audio></div></td><td>5:07</td></tr>	
+		</tbody>
+	</table>
+
+	<table id="ghostStories" style="display: none;">
+		<thead>
+			<tr><th colspan="1">Song</th><th colspan="1">Length</th></tr>
+		</thead>
+		<tbody>
+			<tr><td><button id="asfosBn"type="button" onclick="togglePlayer('asfos', 'asfosPlay', 'asfosBn', 'ghost');">A Sky Full Of Stars</button><div id="asfos" style="display: none"><audio  controls id="asfosPlay"><source src="downloads/Music/coldplay/GhostStories/A Sky Full Of Stars.mp3" type='audio/mp3'><p>Your Browser Doesn't Support the HTML5 Player</p></audio></div></td><td>4:28</td></tr>
+		</tbody>
+	</table>
+
+	<table id="mylo" style="display: none;">
+		<thead>
+			<tr><th colspan="1">Song</th><th colspan="1">Length</th></tr>
+		</thead>
+		<tbody>
+			<tr><td></td><td></td></tr>
+		</tbody>
+	</table>
+
+	<table id="vivaLaVida" style="display: none;">
+		<thead>
+			<tr><th>Song</th><th>Length</th></tr>
+		</thead>
+		<tbody>
+			<tr><td></td><td></td></tr>
+		</tbody>
+	</table>
+	<a href="artists.html" style="color: #002266;">
+		<div style="margin-left: 27.5%; background-color: white; width: 600px; text-align: center; font-family: sans-serif;">
+			<b>Music Home</b>
+		</div>
+	</a>
+</body>
