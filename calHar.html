@@ -1,40 +1,74 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="shortcut icon" type="image/x-icon" href="download.ico"/>
-		<title>Music | Calvin Harris</title>
-		<link type="text/css" rel="stylesheet" href="styodyd.css">
-		<link type="text/css" rel="stylesheet" href="menu.css">
-	</head>
-	<body background="images\download.png">
-		<div style="background-color: white; width: 100%; overflow: hidden;">
-    		<a href="programs.html"><div style="float: left; margin-left: 1%; width: 19%"><span>Programs</span></div></a>
-   			<a href="music.html"><div style="float: left; margin-left: 1%; width: 19%; background-color: white"><span style="color: black">Music</span></div></a>
-   			<a href="movies.html"><div style="float: left; margin-left: 1%; width: 19%"><span>Movies</span></div></a>
-   			<a href="games.html"><div style="float: left; margin-left: 1%; width: 19%"><span>Games</span></div></a>
-   			<a href="otherFiles.html"><div style="float: left; margin-left: 1%; width: 19%"><span>Other</span></div></a>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="download.ico"/>
+	<title>Music | Calvin Harris</title>
+	<link type="text/css" rel="stylesheet" href="nicuwa.css">
+	<link type="text/css" rel="stylesheet" href="button1.css">
+</head>
+<body background="images/maxresdefault1.jpg">
+	<script>
+		function togglePlayer(id, playId, bnId, aId)
+		{
+			if(aId == 'rush')
+			{
+				document.getElementById(id).style.display = 'block';
+				document.getElementById(bnId).style.display = ''
+				document.getElementById('clock').style.display = 'none';
+				if(document.getElementById(id).style.display == 'none')
+				{
+					document.getElementById(id).style.display = 'block';
+					document.getElementById(bnId).style.display = 'none';
+				}
+			}
+			else if(aId == 'ghost')
+			{
+				document.getElementById('asfos').style.display = 'none';
+				if(document.getElementById(id).style.display == 'none')
+				{
+					document.getElementById(id).style.display = 'block';
+					document.getElementById(bnId).style.display = 'none';
+				}
+			}
+			else if(aId == 'xyloto')
+			{
+				
+			}
+			else if(aId == 'viva')
+			{
+				
+			}
+			document.getElementById('asfosPlay').load();
+			document.getElementById('clockPlay').load();
+		}
+	</script>
+	<script>
+		function toggleAlbum(id, dId, tId)
+		{
+			document.getElementById('aRush').style.display = 'none';
+			document.getElementById('ghostStories').style.display = 'none';
+			document.getElementById('mylo').style.display = 'none';
+			document.getElementById('vivaLaVida').style.display = 'none';
+			document.getElementById(id).style.display = 'block';
+		}
+	</script>
+	<div style="margin-left: 27.5%">
+		<div id="aR" style="float: left;">
+			<button onclick="toggleAlbum('motion');"><b id="aT">Motion</b></button>
 		</div>
-		<hr/>
-		<h2><b>Select your search category</b>(all files are in mp3 format)</h2>
-		If you need other file formats, download the file then click <a href="http://www.audio.online-convert.com" style="color: yellow; text-decoration: none">here</a>
-		<br>
-		<a href="artists.html"><div style="float: left; width: 49%; background-color: white"><span style="color: black">Artists</span></div></a>
-		<div style="float: left; width:2%; background-color: lime"></div>
-		<a href="allSongs.html"><div style="float: left; width: 49%"><span>All Songs</span></div></a>
-		<br>
-		<table border="1px" style="margin-left: 300px">
-			<thead>
-				<tr><th colspan="4">Songs By Calvin Harris</th></tr>
-				<tr><th>Name</th><th>Album</th><th>Length</th><th>Size</th></tr>
-			</thead>
-			<tbody>
-				<tr><td><a href="downloads\Music\calvinHarris\Motion\Blame.mp3" download="downloads\Music\calvinHarris\Motion\Blame.mp3">Blame</a></td><td>Motion</td><td>3:31</td><td>3,303 KB</td></tr>
-				<tr><td><a href="downloads\Music\calvinHarris\Motion\Faith.mp3" download="downloads\Music\calvinHarris\Motion\Faith.mp3">Faith</a></td><td>Motion</td><td>3:38</td><td>3,419 KB</td></tr>
-				<tr><td><a href="downloads\Music\calvinHarris\Motion\Outside.mp3" download="downloads\Music\calvinHarris\Motion\Outside.mp3">Outside</a></td><td>Motion</td><td>3:46</td><td>3,539 KB</td></tr>
-				<tr><td><a href="downloads\Music\calvinHarris\Motion\Pray To God.mp3" download="downloads\Music\calvinHarris\Motion\Pray To God.mp3">Pray To God</a></td><td>Motion</td><td>3:51</td><td>3,628 KB</td></tr>
-				<tr><td><a href="downloads\Music\calvinHarris\Motion\Summer.mp3" download="downloads\Music\calvinHarris\Motion\Summer.mp3">Summer</td><td>Motion</a></td><td>3:53</td><td>3,660 KB</td></tr>
-			</tbody>
-		</table>
-		<a href="categories.html"><img src="images\home-button.png" style="width: 200px; height: 200px;"/></a>
-	</body>
-</html>
+	</div>
+
+	<table id="motion" style="display: none;">
+		<thead>
+			<tr><th>Song</th><th>Length</th></tr>
+		</thead>
+		<tbody>
+			<tr><td><button id="blameBn"type="button" onclick="togglePlayer('blame', 'blamePlay', 'blameBn', 'motion');">Blame (feat. John Newman)</button><div id="clock" style="display: none"><audio  controls id="clockPlay"><source src="downloads/Music/calvinHarris/ARushOfBloodToTheHead/Clocks.mp3" type='audio/mp3'><p>Your Browser Doesn't Support the HTML5 Player</p></audio></div></td><td>5:07</td></tr>	
+		</tbody>
+	</table>
+
+	<a href="music.html" style="color: #002266;">
+		<div style="margin-left: 27.5%; background-color: white; width: 600px; text-align: center; font-family: sans-serif;">
+			<b>Music Home</b>
+		</div>
+	</a>
+</body>
